@@ -95,7 +95,7 @@ class Queue<T = unknown> {
             this.options,
             {
                 leaveOnEnd: false,
-                leaveOnStop: true,
+                leaveOnStop: false,
                 leaveOnEmpty: true,
                 leaveOnEmptyCooldown: 1000,
                 autoSelfDeaf: true,
