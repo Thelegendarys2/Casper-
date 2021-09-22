@@ -96,7 +96,7 @@ class Queue<T = unknown> {
             {
                 leaveOnEnd: false,
                 leaveOnStop: false,
-                leaveOnEmpty: true,
+                leaveOnEmpty: false,
                 leaveOnEmptyCooldown: 1000,
                 autoSelfDeaf: true,
                 ytdlOptions: {
