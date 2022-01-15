@@ -97,7 +97,7 @@ class Queue<T = unknown> {
                 leaveOnEnd: false,
                 leaveOnStop: false,
                 leaveOnEmpty: false,
-                leaveOnEmptyCooldown: 1000,
+                leaveOnEmptyCooldown: 15000,
                 autoSelfDeaf: true,
                 ytdlOptions: {
                     highWaterMark: 1 << 25
