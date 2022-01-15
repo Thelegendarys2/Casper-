@@ -95,6 +95,7 @@ class Queue<T = unknown> {
             this.options,
             {
                 leaveOnEnd: false,
+                leaveOnEndCooldown: 5000,
                 leaveOnStop: false,
                 leaveOnEmpty: false,
                 leaveOnEmptyCooldown: 1000,
@@ -187,7 +188,7 @@ class Queue<T = unknown> {
             this.player.emit("trackEnd", this, resource.metadata);
 
             if (!this.tracks.length && this.repeatMode === QueueRepeatMode.OFF) {
-                if (this.options.leaveOnEnd) this.destroy();
+                if (this.options.leaveOnEndCooldown) this.destroy();
                 this.player.emit("queueEnd", this);
             } else {
                 if (this.repeatMode !== QueueRepeatMode.AUTOPLAY) {
